@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Super+Joyful&display=swap');
+
+body {
+    margin: 0;
+    font-family: "Super Joyful", sans-serif;
+    background-color: #a8ddff;
+    color: #004c80;
+    text-align: center;
+}
+
+/* === Halaman Login === */
+.login-page .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.site-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.login-box {
+    background: #e6f5ff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 300px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #007acc;
+}
+
+.btn {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #005f99;
+}
+
+/* === Dashboard === */
+header {
+    background-color: #007acc;
+    color: white;
+    padding: 15px;
+}
+
+nav button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    background-color: white;
+    color: #007acc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+nav button:hover {
+    background-color: #e6f5ff;
+}
+
+main {
+    padding: 20px;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+.socials img {
+    width: 50px;
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+.socials img:hover {
+    transform: scale(1.1);
+}
