@@ -1,15 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SkyBlue Web - Login</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body class="login-page">
   <header>
-    <h1>??? SkyBlue Web</h1>
+    <h1>🌤️ SkyBlue Web</h1>
   </header>
 
   <main>
@@ -17,27 +16,32 @@
       <h2>Login Pengunjung</h2>
       <form onsubmit="return login()">
         <label>Username</label>
-        <input type="text" id="username" placeholder="Masukkan username" required>
+        <input type="text" id="username" placeholder="Masukkan username" required />
         <label>Password</label>
-        <input type="password" id="password" placeholder="Masukkan password" required>
+        <input type="password" id="password" placeholder="Masukkan password" required />
         <button type="submit">Masuk</button>
       </form>
+      <p class="note">Contoh login: <b>admin / 123</b></p>
     </div>
   </main>
 
   <script>
     function login() {
-      const user = document.getElementById('username').value;
-      const pass = document.getElementById('password').value;
+      const user = document.getElementById("username").value.trim();
+      const pass = document.getElementById("password").value.trim();
 
-      // Login sederhana tanpa backend
       if (user === "admin" && pass === "123") {
+        localStorage.setItem("loggedIn", "true");
         window.location.href = "dashboard.html";
         return false;
       } else {
         alert("Username atau password salah!");
         return false;
       }
+    }
+
+    if (localStorage.getItem("loggedIn") === "true") {
+      window.location.href = "dashboard.html";
     }
   </script>
 </body>
