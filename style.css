@@ -1,97 +1,99 @@
 @import url('https://fonts.googleapis.com/css2?family=Super+Joyful&display=swap');
 
-body {
-    margin: 0;
-    font-family: "Super Joyful", sans-serif;
-    background-color: #a8ddff;
-    color: #004c80;
-    text-align: center;
+:root{
+  --sky1: #b3e5fc;
+  --sky2: #81d4fa;
+  --accent: #4fc3f7;
+  --text: #034f84;
+  --danger: #ef5350;
 }
 
-/* === Halaman Login === */
-.login-page .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+body{
+  font-family: 'Super Joyful', cursive;
+  margin:0;
+  background-color: var(--sky1);
+  color: var(--text);
 }
 
-.site-title {
-    font-size: 2em;
-    margin-bottom: 20px;
+/* Header & nav */
+header{
+  background-color: var(--sky2);
+  padding: 20px;
+  text-align:center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+header h1{ margin:0; font-size:2rem; }
+
+nav ul{
+  list-style:none;
+  padding:0;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:10px;
+}
+nav a{
+  text-decoration:none;
+  color: var(--text);
+  background-color: var(--sky1);
+  padding:8px 16px;
+  border-radius:12px;
+  transition:0.3s;
+}
+nav a:hover{ background-color: var(--accent); color:white; }
+nav a.active{ background-color: var(--accent); color:white; }
+.logout-btn{ background-color: var(--danger); color:white; }
+.logout-btn:hover{ background-color:#c62828; }
+
+/* Konten */
+main{ text-align:center; padding:30px; min-height:60vh; }
+.page{ display:none; animation: fade 0.4s; }
+.page.active{ display:block; }
+
+@keyframes fade {
+  from {opacity:0; transform:translateY(10px);}
+  to {opacity:1; transform:translateY(0);}
 }
 
-.login-box {
-    background: #e6f5ff;
-    padding: 20px 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    width: 300px;
+/* Login box */
+.login-box{
+  background-color:#e1f5fe;
+  max-width:350px;
+  margin:60px auto;
+  padding:20px;
+  border-radius:20px;
+  box-shadow:0 3px 8px rgba(0,0,0,0.15);
 }
-
-.login-box input {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    border-radius: 5px;
-    border: 1px solid #007acc;
+.login-box input{
+  width:90%;
+  padding:10px;
+  margin:8px 0;
+  border:none;
+  border-radius:10px;
 }
-
-.btn {
-    background-color: #007acc;
-    color: white;
-    border: none;
-    padding: 10px;
-    width: 100%;
-    border-radius: 5px;
-    cursor: pointer;
+.login-box button{
+  background-color: var(--accent);
+  color:white;
+  border:none;
+  padding:10px 20px;
+  border-radius:10px;
+  cursor:pointer;
 }
+.login-box button:hover{ background-color:#0288d1; }
 
-.btn:hover {
-    background-color: #005f99;
+/* Sosial media */
+.social-links img{
+  width:50px;
+  margin:10px;
+  transition:transform 0.2s;
 }
+.social-links img:hover{ transform:scale(1.1); }
 
-/* === Dashboard === */
-header {
-    background-color: #007acc;
-    color: white;
-    padding: 15px;
-}
-
-nav button {
-    margin: 5px;
-    padding: 10px 15px;
-    border: none;
-    background-color: white;
-    color: #007acc;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-nav button:hover {
-    background-color: #e6f5ff;
-}
-
-main {
-    padding: 20px;
-}
-
-.page {
-    display: none;
-}
-
-.page.active {
-    display: block;
-}
-
-.socials img {
-    width: 50px;
-    margin: 10px;
-    transition: transform 0.3s;
-}
-
-.socials img:hover {
-    transform: scale(1.1);
+/* Footer */
+footer{
+  background-color: var(--sky2);
+  text-align:center;
+  padding:10px;
+  font-size:0.9em;
 }
