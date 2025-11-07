@@ -9,7 +9,7 @@
 }
 
 body{
-  font-family: 'Super Joyful', cursive;
+  font-family: '', cursive;
   margin:0;
   background-color: var(--sky1);
   color: var(--text);
