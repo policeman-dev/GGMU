@@ -120,3 +120,16 @@ footer{
   text-shadow: 0 0 0.5px black;
 }
 
+<head>
+  <style>
+    /* ...CSS lain... */
+
+    header, header * {
+      color: maroon !important;
+    }
+
+    body, body * {
+      color: white !important;
+    }
+  </style>
+</head>
