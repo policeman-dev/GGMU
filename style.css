@@ -116,11 +116,7 @@ footer{
   font-size:0.9em;
 }
 
-/* === TEXT STROKE UNTUK SEMUA TEKS === */
-  * {
-  text-shadow: 0 0 1px black;
-  text-shadow: 0 0 1px black;
-  text-shadow: 0 0 1px black;
-  text-shadow: 0 0 1px black;
-
+* {
+  text-shadow: 0 0 0.5px black;
 }
+
