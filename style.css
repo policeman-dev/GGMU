@@ -118,9 +118,9 @@ footer{
 
 /* === TEXT STROKE UNTUK SEMUA TEKS === */
   * {
-  text-shadow:
-    -0.7px -0.7px 0 white,
-     0.7px -0.7px 0 white,
-    -0.7px  0.7px 0 white,
-     0.7px  0.7px 0 white;
+  text-shadow: 0 0 1px black;
+  text-shadow: 0 0 1px black;
+  text-shadow: 0 0 1px black;
+  text-shadow: 0 0 1px black;
+
 }
