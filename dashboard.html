@@ -1,208 +1,84 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Dashboard - Manchester United Fan Web</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Dashboard - SkyBlue Web</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <!-- Video background -->
-  <video autoplay loop muted playsinline id="bg-video">
-    <source src="videos/background.mp4" type="video/mp4">
-  </video>
+<body class="dashboard-page">
+  
+<video autoplay loop muted playsinline id="bg-video">
+  <source src="videos/background.mp4" type="video/mp4">
+</video>
 
   <header>
-    <h1>Manchester United</h1>
+    <h1>☃️HOMEPAGE</h1></h1>
     <nav>
       <ul>
-        <li><a href="#" id="link-home" onclick="showPage('home')">Home</a></li>
-        <li><a href="#" id="link-info" onclick="showPage('info')">Info</a></li>
-        <li><a href="#" id="link-players" onclick="showPage('players')">Players</a></li>
-        <li><a href="#" id="link-schedule" onclick="showPage('schedule')">Schedule</a></li>
-        <li><a href="#" id="link-jersey" onclick="showPage('jersey')">Jersey</a></li>
-        <li><a href="#" id="link-resources" onclick="showPage('resources')">Resources</a></li>
-        <li><a href="#" id="link-contact" onclick="showPage('contact')">Contact</a></li>
+        <li><a href="#" onclick="showPage('home')" class="active" id="homeLink">Home</a></li>
+        <li><a href="#" onclick="showPage('info')" id="infoLink">Info</a></li>
+        <li><a href="#" onclick="showPage('contact')" id="contactLink">Contact</a></li>
+        <li><a href="#" onclick="showPage('resources')" id="resourcesLink">Resources</a></li>
         <li><a href="index.html" id="logout" class="logout-btn">Logout</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="content-area">
-    <!-- HOME -->
+    <!-- Halaman default -->
     <section id="home" class="page active">
-      <h2>Welcome to Manchester United Fan Web</h2>
-      <p>Website ini dibuat sebagai tugas sekolah. Temukan sejarah, pemain, jadwal, dan resources berguna tentang Manchester United.</p>
-      <div class="hero">
-        <img src="https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg" alt="MU Logo" class="mu-logo">
-      </div>
-      <blockquote class="quote">"Glory Glory Man United!"</blockquote>
+      <h2>Selamat Datang di SkyBlue Web 🌤️</h2>
+      <p>Ini adalah dashboard utama Anda. Klik menu di atas untuk menjelajahi halaman lain tanpa reload!</p>
     </section>
 
-    <!-- INFO -->
     <section id="info" class="page">
-      <h2>Sejarah Singkat</h2>
-      <p>Didirikan 1878 (sebagai Newton Heath), United dikenal sebagai The Red Devils. Tragedi Munich 1958 dan era Sir Alex Ferguson adalah bagian penting sejarah klub.</p>
-
-      <h3>Prestasi Utama</h3>
-      <ul>
-        <li>20× Premier League</li>
-        <li>3× UEFA Champions League</li>
-        <li>12× FA Cup</li>
-      </ul>
-
-      <h3>Pemain Legendaris</h3>
-      <p>Sir Bobby Charlton, George Best, Eric Cantona, Wayne Rooney, Cristiano Ronaldo.</p>
+      <h2>Informasi</h2>
+      <p>Website ini dibuat menggunakan HTML, CSS, dan JavaScript untuk membuat tampilan dinamis tanpa backend.</p>
     </section>
 
-    <!-- PLAYERS -->
-    <section id="players" class="page">
-      <h2>Daftar Pemain (Contoh)</h2>
-      <div class="players-grid">
-        <div class="player-card">
-          <img src="https://via.placeholder.com/140x140?text=Rashford" alt="Rashford">
-          <h4>Marcus Rashford</h4>
-          <p>Forward</p>
-        </div>
-        <div class="player-card">
-          <img src="https://via.placeholder.com/140x140?text=Fernandes" alt="Fernandes">
-          <h4>Bruno Fernandes</h4>
-          <p>Midfield</p>
-        </div>
-        <div class="player-card">
-          <img src="https://via.placeholder.com/140x140?text=Varane" alt="Varane">
-          <h4>Raphaël Varane</h4>
-          <p>Defender</p>
-        </div>
+    <section id="contact" class="page">
+      <h2>Kontak Kami</h2>
+      <p>Hubungi kami melalui platform berikut:</p>
+      <div class="social-links">
+        <a href="https://wa.me/6285731172504" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+        </a>
+        <a href="https://www.tiktok.com/@casper_efb" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok" />
+        </a>
+        <a href="https://www.instagram.com/ptrr2r" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
+        </a>
       </div>
     </section>
 
-    <!-- SCHEDULE -->
-    <section id="schedule" class="page">
-      <h2>Match Schedule (Contoh)</h2>
-      <table class="schedule-table">
-        <thead><tr><th>Date</th><th>Competition</th><th>Opponent</th><th>Venue</th></tr></thead>
-        <tbody>
-          <tr><td>2025-08-17</td><td>Premier League</td><td>Liverpool</td><td>Old Trafford</td></tr>
-          <tr><td>2025-08-24</td><td>Premier League</td><td>Arsenal</td><td>Emirates</td></tr>
-          <tr><td>2025-09-01</td><td>Champions League</td><td>Real Madrid</td><td>Santiago Bernabéu</td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <!-- JERSEY -->
-    <section id="jersey" class="page">
-      <h2>Jersey Gallery</h2>
-      <div class="jersey-grid">
-        <img src="https://via.placeholder.com/220x120?text=Home+2025" alt="Jersey Home">
-        <img src="https://via.placeholder.com/220x120?text=Away+2025" alt="Jersey Away">
-        <img src="https://via.placeholder.com/220x120?text=Third+2025" alt="Jersey Third">
-      </div>
-    </section>
-
-    <!-- RESOURCES -->
     <section id="resources" class="page">
       <h2>Resources</h2>
-      <ul>
-        <li><a href="https://www.manutd.com" target="_blank" rel="noopener">Manchester United Official</a></li>
-        <li><a href="https://en.wikipedia.org/wiki/Manchester_United_F.C." target="_blank" rel="noopener">Wikipedia - Manchester United</a></li>
-        <li><a href="https://www.premierleague.com" target="_blank" rel="noopener">Premier League</a></li>
-        <li><a href="#" download>Download: Wallpaper MU (contoh)</a></li>
-      </ul>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="page">
-      <h2>Kontak Pembuat</h2>
-      <p>Nama: [Nama Kamu] — Kelas: [Isi Kelas] — Keperluan: Tugas Sekolah</p>
-
-      <div class="social-links big">
-        <a href="https://wa.me/6281234567890" target="_blank" aria-label="WhatsApp">
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-        </a>
-        <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok">
-          <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
-        </a>
-        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
-          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
-        </a>
-      </div>
+      <p>Halaman ini berisi tautan atau file tambahan yang bisa kamu tambahkan sesuai kebutuhan.</p>
     </section>
   </main>
 
-  <footer>
-    <p>© 2025 Manchester United Fan Web — Dibuat untuk tugas sekolah</p>
-  </footer>
-
-  <!-- Music button & player (emoji bola, berputar saat playing) -->
-  <button id="musicBtn" onclick="toggleMusic()" title="Play / Pause">⚽</button>
-  <audio id="player"></audio>
-
   <script>
-    // Proteksi halaman dashboard
-    if (localStorage.getItem('loggedIn') !== 'true') {
-      window.location.href = 'index.html';
+    // Proteksi login
+    if (localStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "index.html";
     }
 
-    // SWITCH PAGE
-    function showPage(id) {
-      const pages = document.querySelectorAll('.page');
-      const links = {
-        home: document.getElementById('link-home'),
-        info: document.getElementById('link-info'),
-        players: document.getElementById('link-players'),
-        schedule: document.getElementById('link-schedule'),
-        jersey: document.getElementById('link-jersey'),
-        resources: document.getElementById('link-resources'),
-        contact: document.getElementById('link-contact')
-      };
-      pages.forEach(p => p.classList.remove('active'));
-      Object.values(links).forEach(l => l.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-      links[id].classList.add('active');
-      // scroll to top of content
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    // Logout cleanup: remove localStorage flag (link already points to index)
-    document.getElementById('logout').addEventListener('click', function(){
-      localStorage.removeItem('loggedIn');
+    // Logout
+    document.getElementById("logout").addEventListener("click", function () {
+      localStorage.removeItem("loggedIn");
     });
 
-    // MUSIC PLAYER + BUTTON ANIM
-    const songs = [
-      "audio/lagu1.mp3",
-      "audio/lagu2.mp3",
-      "audio/lagu3.mp3"
-    ];
-    const player = document.getElementById('player');
-    const btn = document.getElementById('musicBtn');
-    let idx = 0;
-    let playing = false;
+    // Fungsi ganti halaman
+    function showPage(pageId) {
+      const pages = document.querySelectorAll(".page");
+      const links = document.querySelectorAll("nav a");
+      pages.forEach(p => p.classList.remove("active"));
+      links.forEach(l => l.classList.remove("active"));
 
-    // init
-    player.src = songs[idx];
-
-    player.addEventListener('ended', () => {
-      idx = (idx + 1) % songs.length;
-      player.src = songs[idx];
-      player.play();
-    });
-
-    function toggleMusic() {
-      if (!playing) {
-        // attempt play; browsers require user gesture — this button is a gesture
-        player.play().then(() => {
-          playing = true;
-          btn.classList.add('spin');
-        }).catch(e => {
-          console.warn('Play failed:', e);
-        });
-      } else {
-        player.pause();
-        playing = false;
-        btn.classList.remove('spin');
-      }
+      document.getElementById(pageId).classList.add("active");
+      document.getElementById(pageId + "Link").classList.add("active");
     }
   </script>
 </body>
