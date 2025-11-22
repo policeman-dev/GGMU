@@ -178,3 +178,17 @@ footer{
 .page .page-box {
     color: white !important;
 }
+
+.wallpaper-container {
+    display: flex;
+    justify-content: center;   /* membuat foto ke tengah */
+    gap: 20px;                 /* jarak antar foto */
+    margin-top: 20px;
+    flex-wrap: wrap;           /* supaya tetap rapi jika layar kecil */
+}
+
+.wallpaper-container img {
+    width: 200px;              /* ukuran foto (bisa diganti) */
+    border-radius: 10px;       /* sudut membulat agar lebih keren */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
